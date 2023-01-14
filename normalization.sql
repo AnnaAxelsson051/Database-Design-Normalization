@@ -26,3 +26,20 @@ FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
+
+/********** Student **********/
+
+DROP TABLE IF EXISTS Student;
+
+CREATE TABLE Student (
+    StudentId INT NOT NULL,
+    FirstName VARCHAR(255) NOT NULL,
+    LastName VARCHAR(255) NOT NULL,
+    Grade VARCHAR(255) NOT NULL,
+    Hobby VARCHAR(255) NOT NULL,
+    CONSTRAINT PRIMARY KEY (StudentId)
+)  ENGINE=INNODB;
+
+INSERT INTO Student (StudentID, FirstName, LastName, Grade, Hobby)
+SELECT DISTINCT Id, SUBSTRING_INDEX(Name, ' ', 1), SUBSTRING_INDEX(Name, ' ', -1), Grade, Hobbies
+FROM UNF;
