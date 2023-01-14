@@ -64,3 +64,11 @@ UNION SELECT ID As StudentId, "Mobile" AS Type, MobilePhone1 as Number FROM UNF
 WHERE MobilePhone1 IS NOT NULL AND MobilePhone1 != ''
 UNION SELECT ID As StudentId, "Mobile" AS Type, MobilePhone2 as Number FROM UNF
 WHERE MobilePhone2 IS NOT NULL AND MobilePhone2 != '';
+
+/********** PhoneList **********/
+
+DROP VIEW IF EXISTS PhoneList;
+
+CREATE VIEW PhoneList AS SELECT StudentId, group_concat(Number) AS Numbers FROM Phone GROUP BY StudentId;
+
+SELECT FirstName, LastName, Numbers from Student JOIN PhoneList USING (StudentId);
