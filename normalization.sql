@@ -18,3 +18,11 @@ CREATE TABLE `UNF` (
     `MobilePhone1` VARCHAR(15),
     `MobilePhone2` VARCHAR(15)
 )  ENGINE=INNODB;
+
+LOAD DATA INFILE '/var/lib/mysql-files/denormalized-data.csv'
+INTO TABLE UNF
+CHARACTER SET latin1
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
