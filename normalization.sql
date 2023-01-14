@@ -108,3 +108,8 @@ UPDATE StudentNameSchool SET SchoolId =  (SELECT @id := @id + 1);
 
 
 ALTER TABLE StudentNameSchool ADD PRIMARY KEY(SchoolId);
+
+/********** HobbiesTemp **********/
+
+DROP VIEW IF EXISTS HobbiesTemp;
+CREATE VIEW HobbiesTemp AS SELECT Id as StudentId, trim(SUBSTRING_INDEX(Hobbies, ",", 1)) AS Hobby FROM UNF UNION SELECT Id as StudentId, trim(substring_index(substring_index(Hobbies, ",", -2),"," ,1)) AS Hobby FROM UNF UNION SELECT Id as StudentId, trim(substring_index(Hobbies, ",", -1)) AS Hobby FROM UNF ORDER BY StudentId;
