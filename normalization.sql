@@ -95,3 +95,16 @@ ALTER TABLE StudentSchool ADD PRIMARY KEY(StudentId, SchoolId);
 SELECT StudentId, FirstName, LastName, SchoolName, City FROM Student
 JOIN StudentSchool USING (StudentId)
 JOIN School USING (SchoolId);
+
+/********** StudentNameSchool **********/
+
+DROP TABLE IF EXISTS StudentNameSchool;
+
+CREATE TABLE StudentNameSchool AS SELECT DISTINCT 0 As SchoolId, School As School, group_concat(Name) AS Name FROM UNF GROUP BY School;
+
+SET @id = 0;
+
+UPDATE StudentNameSchool SET SchoolId =  (SELECT @id := @id + 1);
+
+
+ALTER TABLE StudentNameSchool ADD PRIMARY KEY(SchoolId);
