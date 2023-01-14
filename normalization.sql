@@ -72,3 +72,13 @@ DROP VIEW IF EXISTS PhoneList;
 CREATE VIEW PhoneList AS SELECT StudentId, group_concat(Number) AS Numbers FROM Phone GROUP BY StudentId;
 
 SELECT FirstName, LastName, Numbers from Student JOIN PhoneList USING (StudentId);
+
+/********** School **********/
+
+DROP TABLE IF EXISTS School;
+CREATE TABLE School AS SELECT DISTINCT 0 As SchoolId, School As SchoolName, City FROM UNF;
+
+SET @id = 0;
+UPDATE School SET SchoolId =  (SELECT @id := @id + 1);
+
+ALTER TABLE School ADD PRIMARY KEY(SchoolId);
