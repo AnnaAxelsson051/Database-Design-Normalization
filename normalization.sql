@@ -131,3 +131,22 @@ DROP TABLE IF EXISTS StudentHobby;
 CREATE TABLE StudentHobby AS SELECT StudentId, HobbyId FROM HobbiesTemp JOIN Hobby ON HobbiesTemp.Hobby = Hobby.Name;
 SELECT StudentId, HobbyId from Student JOIN StudentHobby USING(StudentId) JOIN Hobby USING (HobbyId);
 SELECT Student.FirstName, Student.LastName,  StudentId, Hobby.name, HobbyId from Student JOIN StudentHobby USING (StudentId) JOIN Hobby USING(HobbyId);
+
+/********** StudentGrade **********/
+
+DROP VIEW IF EXISTS GradesTemp;
+CREATE VIEW GradesTemp AS SELECT Id as StudentId, Grade as Grade FROM UNF ORDER BY StudentId;
+
+DROP TABLE IF EXISTS Grade;
+CREATE TABLE Grade (
+    GradeId INT NOT NULL AUTO_INCREMENT,
+    GradeLevel VARCHAR(26) NOT NULL,
+    CONSTRAINT PRIMARY KEY(GradeId)
+)  ENGINE=INNODB;
+
+INSERT INTO Grade(GradeLevel) SELECT DISTINCT Grade from GradesTemp;
+
+DROP TABLE IF EXISTS StudentGrade;
+CREATE TABLE StudentGrade AS SELECT StudentId, GradeId FROM GradesTemp JOIN Grade ON GradesTemp.Grade = Grade.GradeLevel ORDER BY GradeId;
+SELECT StudentId, GradeId from Student JOIN StudentGrade USING(StudentId) JOIN Grade USING (GradeId);
+SELECT Student.FirstName, Student.LastName,  StudentId, Grade.GradeLevel, GradeId from Student JOIN StudentGrade USING (StudentId) JOIN Grade USING(GradeId) ORDER BY StudentId;
