@@ -43,3 +43,14 @@ CREATE TABLE Student (
 INSERT INTO Student (StudentID, FirstName, LastName, Grade, Hobby)
 SELECT DISTINCT Id, SUBSTRING_INDEX(Name, ' ', 1), SUBSTRING_INDEX(Name, ' ', -1), Grade, Hobbies
 FROM UNF;
+
+/********** Phone **********/
+
+DROP TABLE IF EXISTS Phone;
+CREATE TABLE Phone (
+    PhoneId INT NOT NULL AUTO_INCREMENT,
+    StudentId INT NOT NULL,
+    Type VARCHAR(32),
+    Number VARCHAR(32) NOT NULL,
+    CONSTRAINT PRIMARY KEY(PhoneId)
+);
