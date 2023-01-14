@@ -113,3 +113,14 @@ ALTER TABLE StudentNameSchool ADD PRIMARY KEY(SchoolId);
 
 DROP VIEW IF EXISTS HobbiesTemp;
 CREATE VIEW HobbiesTemp AS SELECT Id as StudentId, trim(SUBSTRING_INDEX(Hobbies, ",", 1)) AS Hobby FROM UNF UNION SELECT Id as StudentId, trim(substring_index(substring_index(Hobbies, ",", -2),"," ,1)) AS Hobby FROM UNF UNION SELECT Id as StudentId, trim(substring_index(Hobbies, ",", -1)) AS Hobby FROM UNF ORDER BY StudentId;
+
+/********** Hobby **********/ 
+
+DROP TABLE IF EXISTS Hobby;
+CREATE TABLE Hobby (
+    HobbyId INT NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(26) NOT NULL,
+    CONSTRAINT PRIMARY KEY(HobbyId)
+)  ENGINE=INNODB;
+
+INSERT INTO Hobby(Name) SELECT DISTINCT Hobby from HobbiesTemp;
