@@ -54,3 +54,13 @@ CREATE TABLE Phone (
     Number VARCHAR(32) NOT NULL,
     CONSTRAINT PRIMARY KEY(PhoneId)
 );
+
+INSERT INTO Phone(StudentId, Type, Number)
+SELECT ID As StudentId, "Home" AS Type, HomePhone as Number FROM UNF
+WHERE HomePhone IS NOT NULL AND HomePhone != ''
+UNION SELECT ID As StudentId, "Job" AS Type, JobPhone as Number FROM UNF
+WHERE JobPhone IS NOT NULL AND JobPhone != ''
+UNION SELECT ID As StudentId, "Mobile" AS Type, MobilePhone1 as Number FROM UNF
+WHERE MobilePhone1 IS NOT NULL AND MobilePhone1 != ''
+UNION SELECT ID As StudentId, "Mobile" AS Type, MobilePhone2 as Number FROM UNF
+WHERE MobilePhone2 IS NOT NULL AND MobilePhone2 != '';
