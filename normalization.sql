@@ -124,3 +124,10 @@ CREATE TABLE Hobby (
 )  ENGINE=INNODB;
 
 INSERT INTO Hobby(Name) SELECT DISTINCT Hobby from HobbiesTemp;
+
+/********** StudentHobby **********/
+
+DROP TABLE IF EXISTS StudentHobby;
+CREATE TABLE StudentHobby AS SELECT StudentId, HobbyId FROM HobbiesTemp JOIN Hobby ON HobbiesTemp.Hobby = Hobby.Name;
+SELECT StudentId, HobbyId from Student JOIN StudentHobby USING(StudentId) JOIN Hobby USING (HobbyId);
+SELECT Student.FirstName, Student.LastName,  StudentId, Hobby.name, HobbyId from Student JOIN StudentHobby USING (StudentId) JOIN Hobby USING(HobbyId);
