@@ -6,7 +6,7 @@
 
 ### Under kursen på IT-Högskolan lärde jag mig 
 
->#### Databaser
+>**Databaser**
 > - Design av relationsdatabaser
 > - SQL-syntax för att ta fram, sätta ihop och organisera bland data
 > - DDL: Skapa och ändra tables
