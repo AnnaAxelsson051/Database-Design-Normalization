@@ -1,6 +1,6 @@
 # CRUD and Normalization
 
-## Beskrivning
+## Inledning
 
 >I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut redovisa våra färdigheter i SQL, Normalisering samt Java mot en relationsdatabas. Detta är min redovisning från denna kurs. Parallellt med kursen på IT-Högskolan läste jag även av eget fördjupningsintresse online-kursen *Mastering SQL (Using MySql, Java and Go)* på Udemy.
 
@@ -35,7 +35,7 @@
 >Dokumentering av projekt med ett tidsbestämt språk och version control.
 <br>
 
-## Projektet
+## Projektbeskrivning
 
 >Det här projektet består av två delar, den ena är en en CRUD-applikation skriven i testgrenen i Java. Begreppet CRUD står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil och därigenom skapa ett antal användbara tables.
 

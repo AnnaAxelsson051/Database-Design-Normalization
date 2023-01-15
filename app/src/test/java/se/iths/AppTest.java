@@ -82,7 +82,7 @@ class AppTest {
         pstmt.execute();
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT count(*) FROM User");
-        assertTrue(rs.next(), "Should find one row with count!"); 
+        assertTrue(rs.next(), "Should find one row with count!");
         assertEquals(0, rs.getInt(1), "Table should be emtpty");
     }
 }
