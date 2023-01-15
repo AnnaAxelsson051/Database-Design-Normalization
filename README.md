@@ -6,17 +6,8 @@
 
 ### Under kursen på IT-Högskolan lärde jag mig 
 
->**Databaser**
-> - Design av relationsdatabaser
-> - SQL-syntax för att ta fram, sätta ihop och organisera bland data
-> - DDL: Skapa och ändra tables
-> - DML: Uppdatera och eliminera tables
-> - DQL: Välja ut specifik data i en databas
-> - DCL: Ändra och upphäva användares rättigheter i databasen
-> - TCL: Hantera transaktioner
-> - Skapa SQL scripts
-> - ACID
-> - Vikten av konsistens och hur man med hjälp av Normalisering (1NF - 3NF) skyddar konsistensen genom att ta bort/eliminera 
+>#####Databaser
+>Design av relationsdatabaser. SQL-syntax för att ta fram, sätta ihop och organisera bland data. DDL: Skapa och ändra tables. DML: Uppdatera och eliminera tables. DQL: Välja ut specifik data i en databas. DCL: Ändra och upphäva användares rättigheter i databasen. TCL: Hantera transaktioner. Skapa SQL scripts. ACID. Vikten av konsistens och hur man med hjälp av Normalisering (1NF - 3NF) skyddar konsistensen genom att ta bort/eliminera 
           anomalier och på så vis undvika redundant data.
 >##### Utveckling mot relationsdatabaser med Java
 > - Skapa och förstå javaapplikationer som nyttjar relationsdatabaser
