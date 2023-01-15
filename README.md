@@ -41,7 +41,7 @@
 ### Instruktioner för att köra Javaprojektet
 ```
 <mark>gradle check</mark>
-``
+```
 ### Instruktioner för att köra scriptet
 
 docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
