@@ -19,58 +19,63 @@ class AppTest {
 
     public static Connection con = null;
     @BeforeAll
-    //set up database
+    //To be executed first, sets up database
     public static void setUp() throws Exception {
         con = DriverManager.getConnection(JDBC_CONNECTION,JDBC_USER,JDBC_PASSWORD);
-        con.createStatement().execute("DROP TABLE IF EXISTS User ");
+        con.createStatement().execute("DROP TABLE IF EXISTS User ");    //create table user
         con.createStatement().execute("CREATE TABLE User (ID INT NOT NULL AUTO_INCREMENT, NAME VARCHAR(255), ROLE VARCHAR(255), PRIMARY KEY (ID))");
     }
 
     @AfterAll
-    public static void tearDown() throws Exception{
+    public static void tearDown() throws Exception{   //To be executed last, closes connection
         con.close();
     }
 
     @Order(1)
+    //executes first after first method
     @Test
     void shouldCreateRowInDatabase() throws Exception{
         PreparedStatement stmt = con.prepareStatement("INSERT INTO User (NAME, ROLE) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS);
-        stmt.setString(1, TEST_USER);
-        stmt.setString(2, TEST_ROLE);
+        stmt.setString(1, TEST_USER);    //inserts kalle anka
+        stmt.setString(2, TEST_ROLE);    //inserts admin
         stmt.execute();
         ResultSet rs = stmt.getGeneratedKeys();
-        assertTrue(rs.next(), "Should have a row with generated id!");
-        final long expectedIdAfterInsert = 1L;
-        actualIdAfterInsert = rs.getLong(1);
+        assertTrue(rs.next(), "Should have a row with generated id!");  //check if the user now exists in database
+        final long expectedIdAfterInsert = 1L;               //actual id user should have
+        actualIdAfterInsert = rs.getLong(1);     //read id from database
+        //compare so user has correct id:
         assertEquals(expectedIdAfterInsert, actualIdAfterInsert, "Should have correct id after insert!");
+
     }
 
-    @Order(3)
+    @Order(3)      //executes third after first method, ska den va 2?
     @Test
     void shouldFindRowInDatabase() throws Exception {
         PreparedStatement stmt = con.prepareStatement("SELECT Id, Name, Role FROM User WHERE Id = ?");
-        stmt.setLong(1, actualIdAfterInsert);
+        stmt.setLong(1, actualIdAfterInsert);   //find the row we created
         ResultSet rs = stmt.executeQuery();
-        assertTrue(rs.next(), "Should find one row!");
-        assertEquals(actualIdAfterInsert, rs.getLong("Id"), "Selected Id shoule match");
+        assertTrue(rs.next(), "Should find one row!");  //get row
+        //check så that id, name and role in database matches what we sent in:
+        assertEquals(actualIdAfterInsert, rs.getLong("Id"), "Selected Id should match");
         assertTrue(TEST_USER.equalsIgnoreCase(rs.getString("Name")), "Selected user should match");
         assertTrue(TEST_ROLE.equalsIgnoreCase(rs.getString("Role")), "Selected role should match");
         rs.close();
-        stmt.close();
+        stmt.close();   //varför stänga här men inta på andra ställen?
     }
 
     @Order(4)
     @Test
     void shouldUpdateRowInDatabase() throws Exception {
         PreparedStatement stmt = con.prepareStatement("UPDATE User Set ROLE = ? WHERE ID = ?");
-        stmt.setString(1, TEST_NEWROLE);
-        stmt.setLong(2, actualIdAfterInsert);
+        stmt.setString(1, TEST_NEWROLE);         //updates role on id 1 to "User"
+        stmt.setLong(2, actualIdAfterInsert);    //updates id to ?
         stmt.execute();
 
         stmt = con.prepareStatement("SELECT Role FROM User WHERE Id = ?");
-        stmt.setLong(1, actualIdAfterInsert);
+        stmt.setLong(1, actualIdAfterInsert);   //select role where Id = 1
         ResultSet rs = stmt.executeQuery();
         assertTrue(rs.next(), "Should find one row!");
+        //test so that role is "User":
         assertTrue(TEST_NEWROLE.equalsIgnoreCase(rs.getString("Role")), "Updated role should match");
     }
 
