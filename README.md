@@ -6,12 +6,12 @@
 
 ### Under kursen på IT-Högskolan lärde jag mig 
 
->1. Databaser
->        - Design av relationsdatabaser
->        - SQL-syntax för att ta fram, sätta ihop och organisera bland data
->        - DDL: Skapa och ändra tables
->        - DML: Uppdatera och eliminera tables
->        - DQL: Välja ut specifik data i en databas
+>#### Databaser
+> - Design av relationsdatabaser
+> - SQL-syntax för att ta fram, sätta ihop och organisera bland data
+> - DDL: Skapa och ändra tables
+> - DML: Uppdatera och eliminera tables
+> - DQL: Välja ut specifik data i en databas
         - DCL: Ändra och upphäva användares rättigheter i databasen
         - TCL: Hantera transaktioner
         - Skapa SQL scripts
