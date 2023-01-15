@@ -40,11 +40,11 @@
 
 ### Instruktioner för att köra Javaprojektet
 
->gradle check
+gradle check
 
 ### Instruktioner för att köra scriptet
 
->docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
+docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
 
 ### Entity Relationship Diagram
 
