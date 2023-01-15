@@ -1,5 +1,6 @@
 # edu-crud-jdbc
 
+```mermaid
 erDiagram
 Student ||--|{ StudentSchool : accepts
     School ||--|{ StudentSchool : enrolls
@@ -8,7 +9,6 @@ Student ||--|{ StudentSchool : accepts
         string   FirstName
         string   LastName
     }
-
     School {
         int   SchooltId
         string   Name
@@ -18,3 +18,4 @@ Student ||--|{ StudentSchool : accepts
         int   StudentId
         int   SchoolId
     }
+```
