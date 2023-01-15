@@ -4,7 +4,7 @@
 
 >I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut redovisa våra färdigheter i SQL, Normalisering samt Java mot en relationsdatabas. Detta är min redovisning från denna kurs. Parallellt med kursen på IT-Högskolan läste jag även av eget fördjupningsintresse online-kursen *Mastering SQL (Using MySql, Java and Go)* på Udemy.
 
-### Under kursen Utveckling mot databaser på IT-Högskolan lärde jag mig 
+### Under kursen Utveckling mot databaser vid IT-Högskolan lärde jag mig mycket om följande
 
 #### Databaser
 >Design av relationsdatabaser. SQL-syntax för att ta fram, sätta ihop och organisera bland data. 
