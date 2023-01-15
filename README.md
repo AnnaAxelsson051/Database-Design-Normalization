@@ -13,6 +13,7 @@
 > - **DQL**: Välja ut specifik data 
 > - **DCL**: Ändra och upphäva användares rättigheter i databasen 
 > - **TCL**: Hantera transaktioner 
+>
 >Skapa <mark>SQL script</mark>. ACID. Vikten av konsistens och hur man med hjälp av Normalisering (1NF-3NF)  skyddar konsistensen genom att eliminera anomalier och på så vis undvika redundant data.
 #### Utveckling mot relationsdatabaser med Java
 >Skapa och förstå javaapplikationer som nyttjar relationsdatabaser. 
@@ -32,7 +33,7 @@
 > - Docker lifecycle: Run, create/rm, start/stop, pause/unpause
 #### Markdown och git
 >Dokumentering av projekt med ett tidsbestämt språk och version control.
-
+</br>
 ## Projektet
 
 >Det här projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java. Begreppet CRUD står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil och därigenom skapa ett antal användbara tables.
