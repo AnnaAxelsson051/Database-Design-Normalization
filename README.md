@@ -6,17 +6,14 @@
 
 ### Under kursen på IT-Högskolan lärde jag mig 
 
->#####Databaser
->Design av relationsdatabaser. SQL-syntax för att ta fram, sätta ihop och organisera bland data. DDL: Skapa och ändra tables. DML: Uppdatera och eliminera tables. DQL: Välja ut specifik data i en databas. DCL: Ändra och upphäva användares rättigheter i databasen. TCL: Hantera transaktioner. Skapa SQL scripts. ACID. Vikten av konsistens och hur man med hjälp av Normalisering (1NF - 3NF) skyddar konsistensen genom att ta bort/eliminera 
-          anomalier och på så vis undvika redundant data.
->##### Utveckling mot relationsdatabaser med Java
-> - Skapa och förstå javaapplikationer som nyttjar relationsdatabaser
-> - Bädda in SQL i javakod och göra förfrågningar mot databas 
-> - Skapa Springbootapplikationer för att komma åt JPA
->##### Jdbc Interfaces
-> - Konstruera javakod med Driver Manager, Driver, Connection, Statement, Prepare statement och Result set
->##### Mermaid
-> - Rita Entity-Relationship Diagram som illustrerar relationer i databasen
+> #### Databaser
+Design av relationsdatabaser. SQL-syntax för att ta fram, sätta ihop och organisera bland data. DDL: Skapa och ändra tables. DML: Uppdatera och eliminera tables. DQL: Välja ut specifik data i en databas. DCL: Ändra och upphäva användares rättigheter i databasen. TCL: Hantera transaktioner. Skapa SQL scripts. ACID. Vikten av konsistens och hur man med hjälp av Normalisering (1NF - 3NF) skyddar konsistensen genom att ta bort/eliminera anomalier och på så vis undvika redundant data.
+#### Utveckling mot relationsdatabaser med Java
+Skapa och förstå javaapplikationer som nyttjar relationsdatabaser. Bädda in SQL i javakod och göra förfrågningar mot databas. Skapa Springbootapplikationer för att komma åt JPA
+##### Jdbc Interfaces
+Konstruera javakod med Driver Manager, Driver, Connection, Statement, Prepare statement och Result set
+##### Mermaid
+ För att konstruera Entity-Relationship Diagram som illustrerar relationer i databasen
 >##### Vi/Vim
 > - Snabbt göra små förändringar i filer via terminalen
 >##### JUnit
