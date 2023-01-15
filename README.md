@@ -1,8 +1,5 @@
 # edu-crud-jdbc
 
----
-title: Test
----
 erDiagram
 Student ||--|{ StudentSchool : accepts
     School ||--|{ StudentSchool : enrolls
