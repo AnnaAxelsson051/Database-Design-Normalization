@@ -28,13 +28,27 @@
 >Snabbt göra små förändringar i filer via terminalen med Vi. Skapa javaprojekt med Gradle köra och testa dessa med bashkommandon samt Dependency Management: Låna mjukvara till styrfil från gradle/maven repository. Snabbt hantera filer med Bash. 
 #### Docker
 >Hur man kan få tillgång till en utvecklingsmiljö utan att behöva installera en faktisk databas 
-> - arbeta med ett Relationship Database Management system som MySQL eller en dokumentdatabas (MongoDB) och ha många databaser igång samtidigt.
+> - Arbeta med ett Relationship Database Management system som MySQL eller en dokumentdatabas (MongoDB) och ha många databaser igång samtidigt.
 > - Importera kommaseparerat data till en extern maskin och köra sql scripts i en extern maskin. 
 > - Docker lifecycle: Run, create/rm, start/stop, pause/unpause
 #### Markdown och git
->Dokumentering av projekt med ett tidsbestämt språk och version control. 
+>Dokumentering av projekt med ett tidsbestämt språk och version control.
 
-####  Entity Relationship Diagram
+### Projektet
+
+>Det här projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i Java. Begreppet CRUD används ofta vid utveckling mot databaser och står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil.
+
+#### Instruktioner för att köra Javaprojektet
+
+gradle check
+
+#### Instruktioner för att köra scriptet
+
+docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
+
+#### Entity Relationship Diagram
+
+För en kodnära graf i syfte att överblicka relationerna i databasen följer här ett Mermaid diagram.
 
 ```mermaid
 erDiagram

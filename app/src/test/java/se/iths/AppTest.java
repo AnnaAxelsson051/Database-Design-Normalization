@@ -82,10 +82,12 @@ class AppTest {
     @Order(5)
     @Test
     void shouldDeleteRowInDatabase() throws Exception {
-        con.createStatement().execute("DELETE FROM User");
+        PreparedStatement pstmt = con.prepareStatement("DELETE FROM User WHERE Id = ?");  //removes user
+        pstmt.setLong(1, actualIdAfterInsert); //removes user with that id
+        pstmt.execute();
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT count(*) FROM User");
-        assertTrue(rs.next(), "Should find one row with count!");
+        assertTrue(rs.next(), "Should find one row with count!"); //i felloggen vid misslyckande
         assertEquals(0, rs.getInt(1), "Table should be emtpty");
     }
 }
