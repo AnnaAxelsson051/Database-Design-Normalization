@@ -39,9 +39,9 @@
 >Det här projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java. Begreppet CRUD står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil.
 
 ### Instruktioner för att köra Javaprojektet
-
-gradle check
-
+```
+<mark>gradle check</mark>
+``
 ### Instruktioner för att köra scriptet
 
 docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
