@@ -1,10 +1,10 @@
-# edu-crud-jdbc
+# CRUD-and-Normalization
 
 ## Beskrivning
 
->I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut redovisa våra färdigheter i SQL, Normalisering samt Java mot en relationsdatabas. Detta är min redovisning från denna kurs. Parallellt med kursen på IT-Högskolan läste jag även av eget fördjupningsintresse kursen “Mastering SQL (Using MySql, Java and Go) på Udemy.
+>I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut redovisa våra färdigheter i SQL, Normalisering samt Java mot en relationsdatabas. Detta är min redovisning från denna kurs. Parallellt med kursen på IT-Högskolan läste jag även av eget fördjupningsintresse online-kursen *Mastering SQL (Using MySql, Java and Go)* på Udemy.
 
-### Under kursen på IT-Högskolan lärde jag mig 
+### Under kursen Utveckling mot databaser på IT-Högskolan lärde jag mig 
 
 #### Databaser
 >Design av relationsdatabaser. SQL-syntax för att ta fram, sätta ihop och organisera bland data. 
@@ -12,13 +12,12 @@
 > - **DML**: Uppdatera och eliminera tables 
 > - **DQL**: Välja ut specifik data 
 > - **DCL**: Ändra och upphäva användares rättigheter i databasen 
-> - **TCL**: Hantera transaktioner
- 
->Skapa SQL scripts. ACID. Vikten av konsistens och hur man med hjälp av Normalisering (1NF-3NF)  skyddar konsistensen genom att eliminera anomalier och på så vis undvika redundant data.
+> - **TCL**: Hantera transaktioner 
+>Skapa <mark>SQL script</mark>. ACID. Vikten av konsistens och hur man med hjälp av Normalisering (1NF-3NF)  skyddar konsistensen genom att eliminera anomalier och på så vis undvika redundant data.
 #### Utveckling mot relationsdatabaser med Java
 >Skapa och förstå javaapplikationer som nyttjar relationsdatabaser. 
 > - Bädda in SQL i javakod och göra förfrågningar mot databas 
-> - Skapa CRUD-applikationer 
+> - Skapa <mark>CRUD-applikationer</mark> 
 > - Skapa Springbootapplikationer för att komma åt JPA. 
 > - Använda Jdbc Interfaces: Konstruera javakod med Driver Manager, Driver, Connection, Statement, Prepare statement och Result set. 
 > - JUnit: Som ett alternativt sätt att köra kod. Unit test Lifecycle. Test, BeforeEach, AfterEach, AfterAll, AfterEach.
@@ -36,19 +35,19 @@
 
 ## Projektet
 
->Det här projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java. Begreppet CRUD står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil.
+>Det här projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java. Begreppet CRUD står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil och därigenom skapa ett antal användbara tables.
 
 ### Instruktioner för att köra Javaprojektet
 ```
-<mark>gradle check</mark>
+gradle check
 ```
 ### Instruktioner för att köra scriptet
-
+```
 docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
-
+```
 ### Entity Relationship Diagram
 
->Följande graf synliggör relationerna i databasen efter normaliseringen gjorts
+>Följande graf synliggör några av relationerna i databasen efter det att normaliseringen slutförts
 
 ```mermaid
 erDiagram
