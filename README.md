@@ -23,9 +23,9 @@
 > - Använda Jdbc Interfaces: Konstruera javakod med Driver Manager, Driver, Connection, Statement, Prepare statement och Result set. 
 > - JUnit: Som ett alternativt sätt att köra kod. Unit test Lifecycle. Test, BeforeEach, AfterEach, AfterAll, AfterEach.
 #### Mermaid och Lucidchart
->Konstruera Entity-Relationship Diagram som illustrerar relationer i databasen och konstruera flödesscheman.
+>Konstruera kodnära grafer i form av Entity-Relationship Diagram som illustrerar relationer i databasen och synliggöra flöden.
 #### Vi/Vim, Gradle och Bash 
->Snabbt göra små förändringar i filer via terminalen med Vi. Skapa javaprojekt med Gradle köra och testa dessa med bashkommandon samt Dependency Management: Låna mjukvara till styrfil från gradle/maven repository. Snabbt hantera filer med Bash. 
+>Effektivt göra små förändringar i filer via terminalen med Vi. Skapa javaprojekt med Gradle, köra och testa dessa med bashkommandon samt Dependency Management: Låna mjukvara till styrfil från gradle/maven repository. Snabbt hantera filer med Bash. 
 #### Docker
 >Hur man kan få tillgång till en utvecklingsmiljö utan att behöva installera en faktisk databas 
 > - Arbeta med ett Relationship Database Management system som MySQL eller en dokumentdatabas (MongoDB) och ha många databaser igång samtidigt.
@@ -34,21 +34,21 @@
 #### Markdown och git
 >Dokumentering av projekt med ett tidsbestämt språk och version control.
 
-### Projektet
+## Projektet
 
->Det här projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i Java. Begreppet CRUD används ofta vid utveckling mot databaser och står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil.
+>Det här projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java. Begreppet CRUD står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil.
 
-#### Instruktioner för att köra Javaprojektet
+>### Instruktioner för att köra Javaprojektet
 
-gradle check
+>gradle check
 
-#### Instruktioner för att köra scriptet
+>### Instruktioner för att köra scriptet
 
-docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
+>docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
 
-#### Entity Relationship Diagram
+>### Entity Relationship Diagram
 
-För en kodnära graf i syfte att överblicka relationerna i databasen följer här ett Mermaid diagram.
+>Följande graf synliggör relationerna i databasen efter normaliseringen gjorts
 
 ```mermaid
 erDiagram
