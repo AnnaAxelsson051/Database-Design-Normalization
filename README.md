@@ -45,7 +45,7 @@ gradle check
 ```
 ### Instruktioner för att köra scriptet
 ```
-docker exec -i iths-mysql mysql -uiths -piths < normalisering.sql 
+docker exec -i iths-mysql mysql -uiths -piths < normalization.sql 
 ```
 ### Entity Relationship Diagram
 
