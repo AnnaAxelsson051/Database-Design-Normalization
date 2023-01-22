@@ -65,6 +65,7 @@ erDiagram
     }
 ```
 <br>
+
 ### Under kursen Utveckling mot databaser vid IT-Högskolan lärde jag mig på djupet om följande
 
 #### Databaser
