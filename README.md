@@ -6,7 +6,7 @@
 
 ## Projektbeskrivning
 
->Projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java och den andra av ett normaliserings-script skrivet i SQL. Vad gäller scriptet så läses inledningsvis en CSV fil med data in och hänsyn tas då till att å, ä och ö förekommer i datan, varpå datan normaliseras till första till tredje normalform (1NF-3NF) och ett antal användbara tables och views skapas. Merparten av relationerna mellan datan ifråga synliggörs sedan i en graf nedanför.
+>Projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java och den andra av ett normaliserings-script skrivet i SQL. Vad gäller scriptet så läses inledningsvis en CSV fil med data in och hänsyn tas då till att å, ä och ö förekommer i datan, varpå datan normaliseras till allt mellan första till tredje normalform (1NF-3NF) och ett antal användbara tables och views skapas. Merparten av relationerna mellan datan ifråga synliggörs sedan i en graf nedan.
 
 ### Instruktioner för att köra Javaprojektet
 ```
