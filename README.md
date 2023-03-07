@@ -6,7 +6,7 @@
 
 ## Projektbeskrivning
 
->Det här projektet består av två delar, den ena en CRUD-applikation skriven i testgrenen i Java. Begreppet CRUD står för Create, Read, Update, Delete och är en livscykel för entiteter i databaser. Den andra delen av projektet består av ett normaliseringsscript skrivet i SQL. Ett script är en sekvens av instruktioner som i detta fall kommer att normalisera data från en csv fil och därigenom skapa ett antal användbara tables.
+Projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java och den andra av ett normaliserings-script skrivet i SQL. Vad gäller scriptet så läses inledningsvis en CSV fil med data in och hänsyn tas då till att å, ä och ö förekommer i datan, varpå datan normaliseras till första till tredje normalform (1NF-3NF) och ett antal användbara tables och views skapas. Merparten av relationerna mellan datan ifråga synliggörs sedan i en graf nedanför.
 
 ### Instruktioner för att köra Javaprojektet
 ```
