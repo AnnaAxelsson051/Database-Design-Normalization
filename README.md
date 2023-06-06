@@ -69,11 +69,13 @@ erDiagram
 ---
 ## Instruktioner
 
-Kör scriptet:
+#### För att köra projektet i Intellij: idea.cmd . för Windows, idea. för OS.
+
+#### Kör scriptet:
 ```
 docker exec -i iths-mysql mysql -uiths -piths < normalization.sql 
 ```
-Kör Javaprojektet i bash:
+#### Kör Test.Java i bash:
 ```
 gradle check
 ```
