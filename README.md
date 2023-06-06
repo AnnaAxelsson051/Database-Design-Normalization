@@ -15,6 +15,7 @@ I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut
 - Normalisering (1NF-3NF), ACID
 - Mermaid 
 - CRUD
+- Jdbc
 - Markdown
 - JUnit
 - Vi, gradle, bash
