@@ -4,16 +4,15 @@
 
 ## Inledning
 
-I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut redovisa våra färdigheter i SQL, Normalisering samt Java mot en relationsdatabas. Detta är min redovisning från denna kurs. Projektet består av två delar, den ena utgörs av en CRUD-applikation i Java i testgrenen och den andra av ett normaliserings-script i SQL. Vad gäller scriptet lästes inledningsvis en CSV fil med data in där hänsyn togs till att å, ä och ö förekom i datan. Därefter normaliserades datan till första till tredje normalform (1NF-3NF) - och ett antal användbara tables och views skapades. En del av relationerna mellan datan synliggörs i Mermaid-diagrammet nedan.
+I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut redovisa våra färdigheter i SQL, Normalisering samt Java mot en relationsdatabas. Detta är min redovisning från denna kurs. Projektet består av två delar, den ena utgörs av en CRUD-applikation i Java i testgrenen och den andra av ett normaliserings-script i SQL. Vad gäller scriptet läses först en CSV fil med data in där hänsyn tas till att å, ä och ö förekommer i datan. Därefter normaliserades datan till första till tredje normalform (1NF-3NF) - och ett antal användbara tables och views skapades. Några av relationerna mellan datan synliggörs i diagrammet nedan.
 
 ---
 
-## Verktyg som använts
+## Verktyg som använts:
 
 - Docker
-- Databasdesign
-- SQL (DDL, DML, DQL, DCL, TCL)
-- Normalisering (1NF-3NF)
+- SQL (DDL, DML, DQL)
+- Normalisering (1NF-3NF), ACID
 - ACID
 - JUnit
 - Mermaid 
@@ -69,16 +68,16 @@ erDiagram
     }
 ```
 ---
+## Instruktioner
 
-### Instruktioner för att köra Javaprojektet
-```
-gradle check
-```
-### Instruktioner för att köra scriptet
+### Köra scriptet:
 ```
 docker exec -i iths-mysql mysql -uiths -piths < normalization.sql 
 ```
-
+### Köra Javaprojektet i bash:
+```
+gradle check
+```
 
 
 
