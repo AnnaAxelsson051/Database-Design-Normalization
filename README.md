@@ -68,22 +68,24 @@ erDiagram
 ```
 ---
 ## Instruktioner
-
-### För att köra projektet i Intellij
-
-#### För windows: 
+Clona projektet:
+```
+git clone 
+```
+För att köra projektet i Intellij:
+- För windows: 
 ```
 idea.cmd .
 ```
-#### För OS:
+- För OS:
 ```
 idea.
 ```
-#### Kör scriptet:
+Kör scriptet:
 ```
 docker exec -i iths-mysql mysql -uiths -piths < normalization.sql 
 ```
-#### Kör AppTest.Java i bash:
+Kör AppTest.Java i bash:
 ```
 gradle check
 ```
