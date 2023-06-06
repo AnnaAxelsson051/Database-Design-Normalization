@@ -74,11 +74,11 @@ Clona projektet:
 git clone https://github.com/AnnaAxelsson051/Database-Design-Normalization.git
 ```
 För att köra projektet i Intellij:
-- För windows: 
+- Windows: 
 ```
 idea.cmd .
 ```
-- För OS:
+- OS:
 ```
 idea.
 ```
