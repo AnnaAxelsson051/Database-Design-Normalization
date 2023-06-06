@@ -1,24 +1,28 @@
-# CRUD and Normalization
+# CRUD AND NORMALIZATION
+
+---
 
 ## Inledning
 
->I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut redovisa våra färdigheter i SQL, Normalisering samt Java mot en relationsdatabas. Detta är min redovisning från denna kurs. Parallellt med kursen på IT-Högskolan läste jag även av eget fördjupningsintresse online-kursen *Mastering SQL (Using MySql, Java and Go)* på Udemy.
+I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut redovisa våra färdigheter i SQL, Normalisering samt Java mot en relationsdatabas. Detta är min redovisning från denna kurs. Projektet består av två delar, den ena utgörs av en CRUD-applikation i Java i testgrenen och den andra av ett normaliserings-script i SQL. Vad gäller scriptet lästes inledningsvis en CSV fil med data in där hänsyn togs till att å, ä och ö förekom i datan. Därefter normaliserades datan till första till tredje normalform (1NF-3NF) - och ett antal användbara tables och views skapades. En del av relationerna mellan datan synliggörs i Mermaid-diagrammet nedan.
 
-## Projektbeskrivning
+---
 
->Projektet består av två delar, den ena utgörs av en CRUD-applikation skriven i testgrenen i Java och den andra av ett normaliserings-script skrivet i SQL. Vad gäller scriptet så läses inledningsvis en CSV fil med data in och hänsyn tas då till att å, ä och ö förekommer i datan, varpå datan normaliseras till första till tredje normalform (1NF-3NF) och ett antal användbara tables och views skapas. Majoriteten av relationerna mellan datan synliggörs sedan i en graf nedan.
+## Verktyg som använts
 
-### Instruktioner för att köra Javaprojektet
-```
-gradle check
-```
-### Instruktioner för att köra scriptet
-```
-docker exec -i iths-mysql mysql -uiths -piths < normalization.sql 
-```
+- Docker
+- Databasdesign
+- SQL (DDL, DML, DQL, DCL, TCL)
+- Normalisering (1NF-3NF)
+- ACID
+- JUnit
+- Mermaid 
+- Markdown
+- Vi, gradle, bash
+
+---
+
 ### Entity Relationship Diagram
-
->Följande graf synliggör några av relationerna i databasen efter det att normaliseringsscriptet körts.
 
 ```mermaid
 erDiagram
@@ -64,8 +68,21 @@ erDiagram
         string name
     }
 ```
-<br>
+---
 
+### Instruktioner för att köra Javaprojektet
+```
+gradle check
+```
+### Instruktioner för att köra scriptet
+```
+docker exec -i iths-mysql mysql -uiths -piths < normalization.sql 
+```
+
+
+
+
+<--
 ### Under kursen Utveckling mot databaser vid IT-Högskolan lärde jag mig på djupet om följande
 
 #### Databaser
@@ -92,6 +109,6 @@ erDiagram
 >Hur man kan få tillgång till en utvecklingsmiljö utan att behöva installera en faktisk databas. 
 > - Arbeta med ett Relationship Database Management system som MySQL eller en dokumentdatabas (MongoDB) och ha många databaser igång samtidigt.
 > - Importera kommaseparerat data till en extern maskin och köra sql scripts i en extern maskin. 
-> - Docker lifecycle: Run, create/rm, start/stop, pause/unpause
+> - Docker lifecycle: Run, create/rm, start/stop, pause/unpause-->
 #### Markdown och git
 >Dokumentering av projekt med ett tidsbestämt språk och version control.
