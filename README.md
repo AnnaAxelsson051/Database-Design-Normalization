@@ -69,11 +69,11 @@ erDiagram
 ---
 ## Instruktioner
 
-### Kör scriptet:
+Kör scriptet:
 ```
 docker exec -i iths-mysql mysql -uiths -piths < normalization.sql 
 ```
-### Kör Javaprojektet i bash:
+Kör Javaprojektet i bash:
 ```
 gradle check
 ```
