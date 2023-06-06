@@ -69,7 +69,9 @@ erDiagram
 ---
 ## Instruktioner
 
-#### För att köra projektet i Intellij för windows: 
+### För att köra projektet i Intellij
+
+#### För windows: 
 ```
 idea.cmd .
 ```
