@@ -1,6 +1,4 @@
-# DATABASE DESIGN, NORMALIZATION
-
----
+# Database Design - Normalization
 
 ## Beskrivning
 
@@ -8,11 +6,12 @@ I kursen Utveckling mot databaser på IT-Högskolan skulle vi efter kursens slut
 
 ---
 
-## Verktyg som använts:
+## Verktyg som använts
 
 - Docker
 - SQL (DDL, DML, DQL)
-- Normalisering (1NF-3NF), ACID
+- Normalisering (1NF-3NF)
+- ACID
 - Mermaid 
 - CRUD
 - Jdbc
